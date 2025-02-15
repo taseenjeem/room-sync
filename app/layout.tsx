@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
 import { ReduxProvider } from "@/providers/reduxProvider";
 import Navbar from "@/components/layout/navigation/Navbar";
+import ClerkLoadingScreen from "@/components/ui/clerk-loading";
 
 const fontStyle = Barlow({
   subsets: ["latin"],
@@ -26,7 +27,10 @@ export default function RootLayout({
         <body className={`${fontStyle.className} antialiased`}>
           <ReduxProvider>
             <Navbar />
-            {children}
+            <ClerkLoading>
+              <ClerkLoadingScreen />
+            </ClerkLoading>
+            <ClerkLoaded>{children}</ClerkLoaded>
           </ReduxProvider>
         </body>
       </html>
