@@ -19,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontStyle.className} antialiased`}>{children}</body>
+      <body
+        className={`${fontStyle.className} bg-zinc-950 text-primary-foreground antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
