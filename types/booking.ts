@@ -1,10 +1,3 @@
-export interface Room {
-  id: string;
-  name: string;
-  capacity: number;
-  amenities: string[];
-}
-
 export interface Booking {
   id: string;
   roomId: string;

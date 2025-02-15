@@ -1,4 +1,4 @@
-import { Booking } from "@/types";
+import { Booking } from "@/types/booking";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface BookingState {
