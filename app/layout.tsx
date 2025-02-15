@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const fontStyle = Barlow({
   subsets: ["latin"],
@@ -18,12 +19,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${fontStyle.className} bg-zinc-950 text-primary-foreground antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${fontStyle.className} bg-zinc-950 text-primary-foreground antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
