@@ -1,11 +1,5 @@
+import { Room } from "@/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-interface Room {
-  id: string;
-  name: string;
-  capacity: number;
-  amenities: string[];
-}
 
 interface RoomState {
   rooms: Room[];

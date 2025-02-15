@@ -1,13 +1,5 @@
+import { Booking } from "@/types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-interface Booking {
-  id: string;
-  roomId: string;
-  userId: string;
-  title: string;
-  startTime: string;
-  endTime: string;
-}
 
 interface BookingState {
   bookings: Booking[];
