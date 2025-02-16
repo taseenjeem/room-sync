@@ -4,7 +4,7 @@ import { MobileMenu } from "./MobileMenu";
 
 export default function Navbar() {
   return (
-    <nav className="fixed left-0 top-0 z-50 w-full border-b border-zinc-800 bg-background bg-opacity-50 py-2.5 backdrop-blur">
+    <nav className="fixed left-0 top-0 z-50 w-full border-b border-zinc-800 bg-background bg-opacity-20 py-2.5 backdrop-blur">
       <div className="container">
         <div className="flex items-center justify-between">
           <Link
