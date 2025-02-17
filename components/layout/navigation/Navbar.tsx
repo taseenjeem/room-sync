@@ -32,7 +32,7 @@ export default async function Navbar() {
                 </li>
                 <li className="hidden md:block">
                   <Button asChild variant={"ghost"}>
-                    <Link href="/sign-in">My Profile</Link>
+                    <Link href="/profile">My Profile</Link>
                   </Button>
                 </li>
                 <li className="hidden md:block">
